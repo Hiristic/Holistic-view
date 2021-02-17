@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8">  <!-- ; not an MIME type -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Holistic explorer</title>
     <script src="Holistic.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <link rel="shortcut icon" href="favicon.ico"> <!--Remove Cannot GET /favicon.ico error message-->
+
+    <!--Header-->
+    <div class="header"></div>
+
+    <!--Loader-->
+    <div id="loader" class="loader">
+        <svg class="spinner" width="66px" height="66px" stroke-width="5" viewBox="0 0 66 66">
+            <circle cx="33" cy="33" r="25"></circle>
+        </svg>
+    </div>
+
+    <!--Content-->
+    <div id="content" class="root root-children">
+        <!--You will append some cards here-->
+    </div>
 
 </body>
 </html>

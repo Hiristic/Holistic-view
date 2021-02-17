@@ -1,4 +1,49 @@
+/*plugins {
+    id 'org.jetbrains.kotlin.js' version '1.4.30'
+}
+*/
 plugins {
+    id("org.jetbrains.kotlin.js") version "1.4.30"
+}
+
+group "org.example"
+version "0.1"
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    //implementation(kotlin("stdlib-js"))
+//dependencies {
+//    implementation(kotlin("stdlib-js"))
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-js")
+    testImplementation ("org.jetbrains.kotlin:kotlin-test-js")
+}
+
+kotlin {
+    js {
+        browser {
+            webpackTask {
+                cssSupport.enabled = true
+            }
+
+            runTask {
+                cssSupport.enabled = true
+            }
+
+            testTask {
+                useKarma {
+                    useChromeHeadless()
+                    webpackConfig.cssSupport.enabled = true
+                }
+            }
+        }
+        binaries.executable()
+    }
+}
+/*plugins {
     id("org.jetbrains.kotlin.js") version "1.4.0"
 }
 
@@ -42,3 +87,4 @@ dependencies {
     //Coroutines (chapter 8)
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9")
 }
+*/

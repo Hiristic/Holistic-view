@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Do one thing",
+    "description": "And do it well. As it was the only thing you need to do in life.",
+    "url": "index.html",
+    "coverUrl": "this.png"
+  },
+  {
+    "title": "Do another thing",
+    "description": "And do it even better than the first thing you did before you did this thing.",
+    "url": "index.html",
+    "coverUrl": "that.png"
+  }
+]
